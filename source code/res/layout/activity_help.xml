@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Build 1.0"
+            android:textColor="#DE3163"
+            android:textSize="22sp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/git"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/git"
+        android:background="#cdc9c9" />
+
+    <LinearLayout
+        android:id="@+id/whatsNew_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/git"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/whatsNew_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_size"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:onClick="whats_new"
+            android:text="What\'s new" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/whatsNew_layout"
+        android:background="#cdc9c9" />
+
+    <LinearLayout
+        android:id="@+id/help_support_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whatsNew_layout"
+        android:weightSum="2"
+        android:orientation="vertical" />
+
+</RelativeLayout>
